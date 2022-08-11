@@ -10,12 +10,12 @@ let options = {
 }
 
 let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-
+let month = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря']
 
 let currentData = new Date().toLocaleDateString('ru-RU', options);
 
 timeDiv.textContent = new Date().toLocaleTimeString();
-dateDiv.textContent = days[new Date().getDay()] + ' ' + currentData;
+dateDiv.textContent = days[new Date().getDay()] + ', ' + new Date().getDate() + ' ' + month[new Date().getMonth()];
 
 
 
@@ -25,7 +25,7 @@ function showTime(){
 }
 
 function showDate(){
-    dateDiv.textContent = days[new Date().getDay()] + ' ' + currentData;
+    dateDiv.textContent = days[new Date().getDay()] + ', ' + new Date().getDate() + ' ' + month[new Date().getMonth()];
 }
 
 setInterval(showTime, 1000);
