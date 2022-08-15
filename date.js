@@ -22,6 +22,7 @@ dateDiv.textContent = days[new Date().getDay()] + ', ' + new Date().getDate() + 
 function showTime(){
     timeDiv.textContent = new Date().toLocaleTimeString();
     showDate();
+    showGreetings();
 }
 
 function showDate(){
